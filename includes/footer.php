@@ -1,3 +1,5 @@
-<footer>Copyright 2015 <a href="http://h78563.s06.test-hf.su/">arguvos</a>. All rights reserved. </footer>
+	<footer>
+		<p class="copy">&copy; 2015 arguvos | All right reserved &bull; Design By <a href="http://mobifreaks.com" title="Design By Mobifreaks.com">Mobifreaks.com</a></p>
+	</footer>
 </body>
 </html>

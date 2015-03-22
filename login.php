@@ -2,24 +2,26 @@
 <?php go_if_logged() ?>
 
 <?php include("functional/login.php"); ?>
-<?php include("includes/header.php"); ?>
-<h1>LOGIN</h1>
-<div>
-	<form method="post" action="functional/login.php">
-		<p>
-			Username<br />
-			<input type="text" name="username" size="32" />
-		</p>
-		<p>
-			Password<br />
-			<input type="password" name="password" size="32" />
-		</p>
-		<p>
-			<input type="submit" name="login" value="Log In" />
-		</p>
-		<p>No account yet? <a href="register.php" >Register Here</a>!</p>
-	</form>
-</div>
+<?php include("includes/header.php"); ?>   
+	<div class="content">
+		<article>
+			<h2 class="underline">Log In</h2>
+			<form method="post" action="functional/login.php" class="label-top">
+				<div>
+					<label for="name">Username:</label>
+					<input type="text" name="username" size="32" />
+				</div>
+				<div>
+					<label for="password">Password:</label>				
+					<input type="password" name="password" size="32" />
+				</div>
+				<div>
+					<input type="submit" name="login" value="Log In" />
+				</div>
+				<p>No account yet? <a href="register.php" >Register Here</a>!</p>
+			</form>
+		</article>
+	</div>
 <?php include("includes/footer.php"); ?>
 
 <?php if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
