@@ -1,8 +1,7 @@
-<?php include("functional/base_function.php"); ?>
-<?php go_if_logged() ?>
-
-<?php include("functional/login.php"); ?>
-<?php include("includes/header.php"); ?>   
+<?php include("functional/base_function.php");
+go_if_logged();
+include("functional/login.php");
+include("includes/header.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Log In</h2>
@@ -22,6 +21,5 @@
 			</form>
 		</article>
 	</div>
-<?php include("includes/footer.php"); ?>
-
-<?php if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
+<?php include("includes/footer.php");
+if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>

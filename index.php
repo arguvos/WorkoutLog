@@ -1,8 +1,7 @@
-<?php include("functional/base_function.php"); ?>
-
-<?php go_login() ?>
-
-<?php include("includes/header.php"); ?>
+<?php include("functional/base_function.php");
+go_login();
+include("includes/header.php");
+include("includes/vertical_menu.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Welcome</h2>
@@ -20,12 +19,6 @@
 					<input type="submit" name="update" value="Update" />
 				</div>
 			</form>
-
-			<form method="post" action="setting.php" class="label-top">
-				<button type="submit" size="32">Setting</button>
-			</form>
-
-			<p><a href="logout.php">Logout</a> Here!</p>
 		</article>
 	</div>
 <?php include("includes/footer.php"); ?>

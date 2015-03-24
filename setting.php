@@ -1,8 +1,8 @@
-<?php include("functional/base_function.php"); ?>
-<?php go_login() ?>
-
-<?php include("functional/setting.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php include("functional/base_function.php");
+go_login();
+include("functional/setting.php");
+include("includes/header.php");
+include("includes/vertical_menu.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Setting</h2>

@@ -1,8 +1,7 @@
-<?php include("functional/base_function.php"); ?>
-<?php go_if_logged() ?>
-
-<?php include("functional/register.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php include("functional/base_function.php");
+go_if_logged();
+include("functional/register.php");
+include("includes/header.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Register</h2>

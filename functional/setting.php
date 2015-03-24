@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/project/includes/connection.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/project/functional/connection.php"); ?>
 <?php
 if(isset($_POST['exercises']))
 {

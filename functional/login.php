@@ -1,5 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/project/includes/connection.php"); ?>
-<?php
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/project/functional/connection.php");
 if(isset($_POST['login']))
 {
 	login();
@@ -28,9 +27,8 @@ function login()
 
 				if($username == $dbusername && $password == $dbpassword)
 				{
-					$_SESSION['session_user_id']=$dbid;
-					echo('SESSION=' . $_SESSION['session_user_id']);
-					//echo '<script type="text/javascript"> window.location = "../index.php" </script>';
+					$_SESSION['session_user_id']=$dbid;				
+					header("location: " . PAGE_INDEX);
 				}
 			}
 			else 
