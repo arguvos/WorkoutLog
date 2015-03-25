@@ -26,4 +26,17 @@ function logout()
 	session_destroy();
 	header("location:login.php");
 }
+
+function get_username_by_id()
+{
+	if(isset($_SESSION["session_user_id"]))
+	{
+		require_once($_SERVER['DOCUMENT_ROOT'] . "/project/functional/connection.php");
+		$query = "SELECT NAME FROM USERS WHERE ID='".$_SESSION["session_user_id"]."'";
+		$result_query = mysql_query($query);
+		$table_with_result = mysql_fetch_row($result_query);
+		$result = $table_with_result[0];
+		return $result;
+	}
+}
 ?>

@@ -15,6 +15,7 @@ define("FILE_LOGIN", "/project/functional/login.php");
 define("FILE_REGISTER", "/project/functional/register.php");
 define("FILE_SETTING", "/project/functional/setting.php");
 
+define("PAGE_LOGIN", "/project/login.php");
 define("PAGE_LOGOUT", "/project/logout.php");
 define("PAGE_SETTING", "/project/setting.php");
 define("PAGE_INDEX", "/project/index.php");

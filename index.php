@@ -5,7 +5,7 @@ include("includes/vertical_menu.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Welcome</h2>
-			<h4>Welcome, <?php echo $_SESSION['session_user_id']; ?>!</h4>
+			<h4>Welcome, <?php echo get_username_by_id(); ?>!</h4>
 			<form method="post" action="" class="label-top">
 				<div>
 					<label for="name">Name of exercises:</label>
@@ -13,8 +13,12 @@ include("includes/vertical_menu.php"); ?>
 				</div>
 				<div>
 					<label for="name">Number of exercises:</label>
-					<input type="text" name="number_exercises" size="32" />
+					<input type="text" id="number_exercises" name="number_exercises" size="32" />
 				</div>
+				<script>
+					input = document.getElementById('number_exercises')
+					input.onkeyup = function(){this.value = this.value.replace(/[^0-9]/g,'')}
+				</script>
 				<div>
 					<input type="submit" name="update" value="Update" />
 				</div>

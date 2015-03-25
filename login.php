@@ -5,7 +5,8 @@ include("includes/header.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Log In</h2>
-			<form method="post" action="functional/login.php" class="label-top">
+			<?php if (!empty($message)) echo("Message: ". $message); ?>
+			<form method="post" action="" class="label-top">
 				<div>
 					<label for="name">Username:</label>
 					<input type="text" name="username" size="32" />
@@ -21,5 +22,4 @@ include("includes/header.php"); ?>
 			</form>
 		</article>
 	</div>
-<?php include("includes/footer.php");
-if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
+<?php include("includes/footer.php"); ?>
