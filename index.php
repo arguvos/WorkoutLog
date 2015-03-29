@@ -1,11 +1,14 @@
 <?php include("functional/base_function.php");
 go_login();
+include("functional/index.php");
 include("includes/header.php");
 include("includes/vertical_menu.php"); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Welcome</h2>
 			<h4>Welcome, <?php echo get_username_by_id(); ?>!</h4>
+			<h5>Today: <?php echo get_DMY(); ?></h5>
+			<?php if (!empty($message)) echo("Message: ". $message); ?>
 			<form method="post" action="" class="label-top">
 				<div>
 					<label for="name">Name of exercises:</label>

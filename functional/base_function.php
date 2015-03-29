@@ -39,4 +39,11 @@ function get_username_by_id()
 		return $result;
 	}
 }
+
+function get_DMY()
+{
+	$today = getdate();
+	$date = $today['year'] . "-" . $today['mon'] . "-" . $today['mday'];
+	return $date;
+}
 ?>

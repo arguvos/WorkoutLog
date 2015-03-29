@@ -14,8 +14,9 @@ function register()
 		$username = $_POST['username'];
 		$password = md5($_POST['password']);
 		
-		$query = mysql_query("SELECT * FROM USERS WHERE NAME='".$username."'");
-		$numrows = mysql_num_rows($query);
+		$query = "SELECT * FROM USERS WHERE NAME='".$username."'";
+		$result = mysql_query($query);
+		$numrows = mysql_num_rows($result);
 		
 		if ($numrows == 0)
 		{
@@ -27,7 +28,7 @@ function register()
 			$table_with_user_id = mysql_fetch_row($result_get_user_id);
 			$name = "EXERCISES_". $table_with_user_id[0];
 
-			$sql_create_user_table = "CREATE TABLE `$name` (`ID` INT(10) NOT NULL, `WEIGHT` INT(10) NOT NULL, PRIMARY KEY (`ID`))";
+			$sql_create_user_table = "CREATE TABLE `$name` (`ID` INT(10) NOT NULL AUTO_INCREMENT, `WEIGHT` INT(10) NOT NULL, `DAY` DATE NOT NULL, PRIMARY KEY (`ID`))";
 			$result_create_user_table = mysql_query($sql_create_user_table);
 
 			if ($result_add_user and $result_get_user_id and $result_create_user_table)
