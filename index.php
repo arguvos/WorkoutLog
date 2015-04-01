@@ -1,8 +1,8 @@
 <?php include("functional/base_function.php");
 go_login();
-include("functional/index.php");
-include("includes/header.php");
-include("includes/vertical_menu.php"); ?>
+include(FILE_INDEX);
+include(FILE_HEADER);
+include(FILE_MENU); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Welcome</h2>
@@ -28,4 +28,4 @@ include("includes/vertical_menu.php"); ?>
 			</form>
 		</article>
 	</div>
-<?php include("includes/footer.php"); ?>
+<?php include(FILE_FOOTER); ?>

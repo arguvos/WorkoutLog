@@ -1,8 +1,8 @@
 <?php include("functional/base_function.php");
 go_login();
-include("functional/setting.php");
-include("includes/header.php");
-include("includes/vertical_menu.php"); ?>
+include(FILE_SETTING);
+include(FILE_HEADER);
+include(FILE_MENU); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Setting</h2>
@@ -18,4 +18,4 @@ include("includes/vertical_menu.php"); ?>
 		</article>
 	</div>
 <?php if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} ?>
-<?php include("includes/footer.php"); ?>
+<?php include(FILE_FOOTER); ?>

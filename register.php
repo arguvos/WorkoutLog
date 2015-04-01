@@ -1,7 +1,7 @@
 <?php include("functional/base_function.php");
 go_if_logged();
-include("functional/register.php");
-include("includes/header.php"); ?>
+include(FILE_REGISTER);
+include(FILE_HEADER); ?>
 	<div class="content">
 		<article>
 			<h2 class="underline">Register</h2>
@@ -26,4 +26,4 @@ include("includes/header.php"); ?>
 			</form>
 		</article>
 	</div>
-<?php include("includes/footer.php"); ?>
+<?php include(FILE_FOOTER); ?>

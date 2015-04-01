@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/project/functional/connection.php");
+<?php
 $message = "";
 if(isset($_POST['update']))
 {
